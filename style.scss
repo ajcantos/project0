@@ -1,3 +1,11 @@
+$myown-book-story-style: italic;
+$myown-book-weight-style: bold;
+$myown-story-color-style: darkslategrey;
+
+%myown-basic-margin-top {
+    margin-top: 20px;
+}
+
 .myown-card-margins {
     margin-bottom: 20px;
 }
@@ -9,31 +17,34 @@
 }
 
 td > .myown-book {
-    font-style: italic;
+    font-style: $myown-book-story-style;
 }
 
 p .myown-book {
-    font-style: italic;
-    font-weight: bold;
+    font-style: $myown-book-story-style;
+    font-weight: $myown-book-weight-style;
 }
 
-p .myown-story {
-    font-style: italic;
-    color: darkgrey;
+p {
+    .myown-story {
+        font-style: $myown-book-story-style;
+        color: $myown-story-color-style;
+    }
 }
 
 h4 {
-    margin-top: 20px;
+    @extend %myown-basic-margin-top;
     margin-bottom: 20px;
 }
 
 h5 {
-    margin-top: 20px;
+    @extend %myown-basic-margin-top;
+    margin-bottom: 5px;
 }
 
 #myown-top-title {
-    margin-top:50px;
-    margin-bottom:50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #myown-thanks-for-reading {
